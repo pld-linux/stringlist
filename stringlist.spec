@@ -53,12 +53,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) /usr/X11R6/lib/lib*.so*
 /usr/X11R6/include/*
-
-%changelog
-* Fri Feb 05 1999 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-  [0.3-1d]
-- build for PLD,
-- rewrote spec file.
-
-* Tue Aug 18 1998 Term <term@dfw.net>
-- First try at an RPM for StringList, hacked from esound's. :)
