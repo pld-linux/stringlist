@@ -9,6 +9,9 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	‚…¬Ã…œ‘≈À…
+Group(uk):	‚¶¬Ã¶œ‘≈À…
 Source0:	ftp://ftp.debian.org/debian/dists/main/devel/libs/%{name}-%{version}.tar.bz2
 URL:		http://mandrake.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -27,6 +30,7 @@ Summary:	Header files and other resources for development
 Summary(pl):	Pliki nag≥Ûwkowe i inne zasoby potrzebne
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
