@@ -5,13 +5,6 @@ Version:	0.3
 Release:	5
 License:	GPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	ftp://ftp.debian.org/debian/dists/main/devel/libs/%{name}-%{version}.tar.bz2
 URL:		http://mandrake.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,13 +22,6 @@ konfiguracyjnych dla Enlightenmenta.
 Summary:	Header files and other resources for development
 Summary(pl):	Pliki nagЁСwkowe i inne zasoby potrzebne
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -50,13 +36,6 @@ wykorzystujacych bibliotekЙ stringlist.
 Summary:	Static stringlist library
 Summary(pl):	Biblioteka statyczna stringlist
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
