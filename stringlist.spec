@@ -9,7 +9,7 @@ Group(pl):	X11/Biblioteki
 #######		ftp://ftp.debian.org/debian/dists/main/devel/libs
 Source:		%{name}-%{version}.tar.bz2
 URL:		http://mandrake.net/
-BuildRoot:	/tmp/buildroot-%{name}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 The StringList library provides several miscellaneous sets of functions
