@@ -56,7 +56,7 @@ LDFLAGS="-s"; export LDFLAGS
 %configure \
 	 --enable-shared \
 	 --enable-static
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
