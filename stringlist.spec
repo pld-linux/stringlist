@@ -2,27 +2,31 @@ Summary:	Miscellaneous Memory and Configuration Function Library
 Summary(pl):	Biblioteka funkcji konfiguracyjnych dla enlightenmenta
 Name:		stringlist
 Version:	0.3
-Release:	2
-Copyright:	GPL
+Release:	3
+License:	GPL
 Group:		Libraries
+Group(de):	Libraries
+Group(fr):	Librairies
 Group(pl):	Biblioteki
-Source:		ftp://ftp.debian.org/debian/dists/main/devel/libs/%{name}-%{version}.tar.bz2
+Source0:	ftp://ftp.debian.org/debian/dists/main/devel/libs/%{name}-%{version}.tar.bz2
 URL:		http://mandrake.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The StringList library provides several miscellaneous sets of functions
-for tracking memory usage, Enlightenment's configuration language, file
-and string manipulations.
+The StringList library provides several miscellaneous sets of
+functions for tracking memory usage, Enlightenment's configuration
+language, file and string manipulations.
 
 %description -l pl 
-Biblioteka StringList umo¿liwia ró¿norodne ustawienia funkcji 
+Biblioteka StringList umo¿liwia ró¿norodne ustawienia funkcji
 konfiguracyjnych dla Enlightenmenta.
 
 %package devel
 Summary:	Header files and other resources for development
 Summary(pl):	Pliki nag³ówkowe i inne zasoby potrzebne
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
+Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
@@ -38,6 +42,8 @@ wykorzystujacych bibliotekê stringlist.
 Summary:	Static stringlist library
 Summary(pl):	Biblioteka statyczna stringlist
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
+Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
@@ -82,4 +88,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/*
 
 %files static
+%defattr(644,root,root,755)
 %attr(644,root,root) %{_libdir}/lib*.a
