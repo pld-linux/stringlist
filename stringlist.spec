@@ -2,7 +2,7 @@ Summary:	Miscellaneous Memory and Configuration Function Library
 Summary(pl):	Biblioteka funkcji konfiguracyjnych dla enlightenmenta
 Name:		stringlist
 Version:	0.3
-Release:	1d
+Release:	2
 Copyright:	GPL
 Group:		X11/Libraries
 Group(pl):	X11/Biblioteki
@@ -39,7 +39,7 @@ make prefix=$RPM_BUILD_ROOT/usr/X11R6 install
 
 strip $RPM_BUILD_ROOT/usr/X11R6/lib/lib*.so.*.*
 
-bzip2 -9 ChangeLog NEWS README
+gzip -9nf ChangeLog NEWS README
 
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog.bz2 NEWS.bz2 README.bz2
+%doc ChangeLog.gz NEWS.gz README.gz
 
 %attr(755,root,root) /usr/X11R6/lib/lib*.so*
 /usr/X11R6/include/*
