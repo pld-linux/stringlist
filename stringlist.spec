@@ -52,7 +52,6 @@ Biblioteka statyczna stringlist.
 
 %build
 autoconf
-LDFLAGS="-s"; export LDFLAGS
 %configure \
 	 --enable-shared \
 	 --enable-static
@@ -62,8 +61,6 @@ LDFLAGS="-s"; export LDFLAGS
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 gzip -9nf ChangeLog NEWS README
 
