@@ -2,7 +2,7 @@ Summary:	Miscellaneous Memory and Configuration Function Library
 Summary(pl):	Biblioteka funkcji konfiguracyjnych dla enlightenmenta
 Name:		stringlist
 Version:	0.3
-Release:	4
+Release:	5
 License:	GPL
 Group:		Libraries
 Group(de):	Libraries
@@ -58,8 +58,7 @@ Biblioteka statyczna stringlist.
 %setup -q
 
 %build
-autoconf
-%configure \
+%configure2_13 \
 	 --enable-shared \
 	 --enable-static
 %{__make}
