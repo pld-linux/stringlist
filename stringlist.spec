@@ -8,7 +8,7 @@ Group:		Libraries
 Group(pl):	Biblioteki
 Source:		ftp://ftp.debian.org/debian/dists/main/devel/libs/%{name}-%{version}.tar.bz2
 URL:		http://mandrake.net/
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The StringList library provides several miscellaneous sets of functions
