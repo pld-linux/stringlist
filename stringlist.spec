@@ -4,10 +4,9 @@ Name:		stringlist
 Version:	0.3
 Release:	2
 Copyright:	GPL
-Group:		X11/Libraries
-Group(pl):	X11/Biblioteki
-#######		ftp://ftp.debian.org/debian/dists/main/devel/libs
-Source:		%{name}-%{version}.tar.bz2
+Group:		Libraries
+Group(pl):	Biblioteki
+Source:		ftp://ftp.debian.org/debian/dists/main/devel/libs/%{name}-%{version}.tar.bz2
 URL:		http://mandrake.net/
 BuildRoot:	/tmp/%{name}-%{version}-root
 
@@ -19,29 +18,56 @@ and string manipulations.
 %description -l pl 
 Biblioteka StringList umo¿liwia ró¿norodne ustawienia funkcji 
 konfiguracyjnych dla Enlightenmenta.
- 
+
+%package devel
+Summary:	Header files and other resources for development
+Summary(pl):	Pliki nag³ówkowe i inne zasoby potrzebne
+Group:		Development/Libraries
+Group(pl):	Programowanie/Biblioteki
+Requires:	%{name} = %{version}
+
+%description devel
+Header files and other resources for development stringlist based
+applications.
+
+%description -l pl devel
+Pliki nagó³wkowe i inne zasoby potrzebne przy robieniu aplikacji
+wykorzystujacych bibliotekê stringlist.
+
+%package static
+Summary:	Static stringlist library
+Summary(pl):	Biblioteka statyczna stringlist
+Group:		Development/Libraries
+Group(pl):	Programowanie/Biblioteki
+Requires:	%{name}-devel = %{version}
+
+%description static
+Static stringlist library.
+
+%description -l pl static
+Biblioteka statyczna stringlist.
+
 %prep
 %setup -q
 
 %build
 autoconf
-CFLAGS=$RPM_OPT_FLAGS LDFLAGS=-s \
-     ./configure %{_target_platform} \
-         --prefix=/usr/X11R6 \
+LDFLAGS="-s"; export LDFLAGS
+%configure \
 	 --enable-shared \
-	 --disable-static
+	 --enable-static
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make prefix=$RPM_BUILD_ROOT/usr/X11R6 install
+make DESTDIR=$RPM_BUILD_ROOT install
 
-strip $RPM_BUILD_ROOT/usr/X11R6/lib/lib*.so.*.*
+strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 gzip -9nf ChangeLog NEWS README
 
-%post -p /sbin/ldconfig
+%post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %clean
@@ -49,7 +75,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog.gz NEWS.gz README.gz
+%attr(755,root,root) %{_libdir}/lib*.so.*.*
 
-%attr(755,root,root) /usr/X11R6/lib/lib*.so*
-/usr/X11R6/include/*
+%files devel
+%defattr(644,root,root,755)
+%doc ChangeLog.gz NEWS.gz README.gz
+%attr(755,root,root) %{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/lib*.la
+%{_includedir}/*
+
+%files static
+%attr(644,root,root) %{_libdir}/lib*.a
