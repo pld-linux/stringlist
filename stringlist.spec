@@ -14,7 +14,7 @@ The StringList library provides several miscellaneous sets of
 functions for tracking memory usage, Enlightenment's configuration
 language, file and string manipulations.
 
-%description -l pl 
+%description -l pl
 Biblioteka StringList umo¿liwia ró¿norodne ustawienia funkcji
 konfiguracyjnych dla Enlightenmenta.
 
@@ -28,7 +28,7 @@ Requires:	%{name} = %{version}
 Header files and other resources for development stringlist based
 applications.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nagó³wkowe i inne zasoby potrzebne przy robieniu aplikacji
 wykorzystujacych bibliotekê stringlist.
 
@@ -41,7 +41,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static stringlist library.
 
-%description -l pl static
+%description static -l pl
 Biblioteka statyczna stringlist.
 
 %prep
