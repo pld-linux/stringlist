@@ -23,7 +23,7 @@ konfiguracyjnych dla Enlightenmenta.
 Summary:	Header files and other resources for development
 Summary(pl):	Pliki nag³ówkowe i inne zasoby potrzebne
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files and other resources for development stringlist based
@@ -57,7 +57,8 @@ Biblioteka statyczna stringlist.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
