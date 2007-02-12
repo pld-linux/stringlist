@@ -1,5 +1,5 @@
 Summary:	Miscellaneous Memory and Configuration Function Library
-Summary(pl.UTF-8):   Biblioteka funkcji konfiguracyjnych dla enlightenmenta
+Summary(pl.UTF-8):	Biblioteka funkcji konfiguracyjnych dla enlightenmenta
 Name:		stringlist
 Version:	0.3
 Release:	5
@@ -21,7 +21,7 @@ konfiguracyjnych dla Enlightenmenta.
 
 %package devel
 Summary:	Header files and other resources for development
-Summary(pl.UTF-8):   Pliki nagłówkowe i inne zasoby potrzebne
+Summary(pl.UTF-8):	Pliki nagłówkowe i inne zasoby potrzebne
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -35,7 +35,7 @@ wykorzystujacych bibliotekę stringlist.
 
 %package static
 Summary:	Static stringlist library
-Summary(pl.UTF-8):   Biblioteka statyczna stringlist
+Summary(pl.UTF-8):	Biblioteka statyczna stringlist
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
