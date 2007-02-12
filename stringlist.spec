@@ -1,5 +1,5 @@
 Summary:	Miscellaneous Memory and Configuration Function Library
-Summary(pl):	Biblioteka funkcji konfiguracyjnych dla enlightenmenta
+Summary(pl.UTF-8):   Biblioteka funkcji konfiguracyjnych dla enlightenmenta
 Name:		stringlist
 Version:	0.3
 Release:	5
@@ -15,13 +15,13 @@ The StringList library provides several miscellaneous sets of
 functions for tracking memory usage, Enlightenment's configuration
 language, file and string manipulations.
 
-%description -l pl
-Biblioteka StringList umo¿liwia ró¿norodne ustawienia funkcji
+%description -l pl.UTF-8
+Biblioteka StringList umoÅ¼liwia rÃ³Å¼norodne ustawienia funkcji
 konfiguracyjnych dla Enlightenmenta.
 
 %package devel
 Summary:	Header files and other resources for development
-Summary(pl):	Pliki nag³ówkowe i inne zasoby potrzebne
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i inne zasoby potrzebne
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -29,20 +29,20 @@ Requires:	%{name} = %{version}-%{release}
 Header files and other resources for development stringlist based
 applications.
 
-%description devel -l pl
-Pliki nagó³wkowe i inne zasoby potrzebne przy robieniu aplikacji
-wykorzystujacych bibliotekê stringlist.
+%description devel -l pl.UTF-8
+Pliki nagÃ³Å‚wkowe i inne zasoby potrzebne przy robieniu aplikacji
+wykorzystujacych bibliotekÄ™ stringlist.
 
 %package static
 Summary:	Static stringlist library
-Summary(pl):	Biblioteka statyczna stringlist
+Summary(pl.UTF-8):   Biblioteka statyczna stringlist
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
 Static stringlist library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna stringlist.
 
 %prep
