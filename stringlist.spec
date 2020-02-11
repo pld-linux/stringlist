@@ -5,7 +5,7 @@ Version:	0.3
 Release:	5
 License:	GPL
 Group:		Libraries
-Source0:	ftp://ftp.debian.org/debian/dists/main/devel/libs/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.debian.org/debian/dists/main/devel/libs/%{name}-%{version}.tar.bz2
 # Source0-md5:	a42e43f67e41a6eb52571034c95e0fb4
 URL:		http://mandrake.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
